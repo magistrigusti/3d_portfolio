@@ -6,10 +6,8 @@ import birdScene from "../assets/3d/bird.glb";
 const Bird = () => {
   const birdRef = useRef();
 
-  // Load the 3D model and animations from the provided GLTF file
   const { scene, animations } = useGLTF(birdScene);
 
-  // Get access to the animations for the bird
   const { actions } = useAnimations(animations, birdRef);
 
   useEffect(() => {
@@ -42,9 +40,7 @@ const Bird = () => {
   });
 
   return (
-    // to create and display 3D objects
     <mesh ref={birdRef} position={[-5, 2, 1]} scale={[0.003, 0.003, 0.003]}>
-      
       <primitive object={scene} />
     </mesh>
   );
