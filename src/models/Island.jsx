@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 
 import { a } from "@react-spring/three";
 import { useEffect, useRef } from "react";
