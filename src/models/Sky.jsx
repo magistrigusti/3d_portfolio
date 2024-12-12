@@ -7,11 +7,11 @@ const Sky = ({ isRotating }) => {
   const sky = useGLTF(skyScene);
   const skyRef = useRef();
 
-  // useFrame((_, delta) => {
-  //   if (isRotating) {
-  //     skyRef.current.rotation.y += 0.25 * delta; // Adjust the rotation speed as needed
-  //   }
-  // });
+  useFrame((_, delta) => {
+    if (isRotating) {
+      skyRef.current.rotation.y += 0.25 * delta; 
+    }
+  });
 
   return (
     <mesh ref={skyRef}>

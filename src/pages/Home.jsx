@@ -14,6 +14,7 @@ import Plane from '../models/Plane';
 
 const Home = () => {
   const [isRotating, setIsRotating] = useState(false);
+  const [currentStage, setCurrentStage] = useState(1);
 
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
@@ -61,16 +62,17 @@ const Home = () => {
             groundColor="#000000"
             intensity={1}
           />
+        
+        <Bird />
+        <Sky isRotating={isRotating} />
 
-          <Sky />
-          <Bird />
-
-          <Island position={islandPosition} 
-            scale={islandScale} 
-            rotation={islandRotation}
-            isRotating={isRotating}
-            setIsRotating={setIsRotating}
-          />
+        <Island position={islandPosition} 
+          scale={islandScale} 
+          rotation={islandRotation}
+          isRotating={isRotating}
+          setIsRotating={setIsRotating}
+          setCurrentStage={setCurrentStage}
+        />
 
         <Plane isRotating={isRotating}
           planeScale={planeScale} 
