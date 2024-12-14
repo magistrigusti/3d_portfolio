@@ -2,6 +2,7 @@ import React, { useState, useRef, Suspense } from "react";
 import emailjs from '@emailjs/browser';
 import { Canvas } from '@react-three/fiber';
 import Loader from "../components/Loader";
+import Alert from "../components/Alert";
 import Fox from '../models/Fox';
 import useAlert from '../hooks/useAlert';
 
@@ -35,8 +36,10 @@ const Contact = () => {
       import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
     ).then(() => {
       setIsLoading(false);
+      showAlert({show: true, text: "Message sent successfully!", type: "success"});
 
       setTimeout(() => {
+        hideAlert();
         setCurrentAnimation('idle');
         setForm({name: '', email: '', message: ''});
       }, [3000]);
@@ -44,6 +47,7 @@ const Contact = () => {
       setIsLoading(false);
       setCurrentAnimation('idle');
       console.log(error);
+      showAlert({show: true, text: "I didnt receive your message", type: 'danger'})
     })
   };
 
@@ -53,6 +57,10 @@ const Contact = () => {
 
   return (
     <section className="relative flex l:flex-row flex-col max-container">
+      
+      {alert.show && <Alert {...alert} />}
+      <Alert text="test" />
+
       <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get in Touch</h1>
 
