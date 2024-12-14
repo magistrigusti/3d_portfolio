@@ -1,11 +1,11 @@
 import css from './css.svg'
-import express from './express.svg'
+import ton from './ton.png'
 import git from './git.svg'
 import github from './github.svg'
 import html from './html.svg'
 import javascript from './javascript.svg'
 import mongodb from './mongodb.svg'
-import motion from './motion.svg'
+import solidity from './solidity.webp'
 import mui from './mui.svg'
 import nextjs from './nextjs.svg'
 import nodejs from './nodejs.svg'
@@ -29,13 +29,13 @@ import soundoff from './soundoff.png'
 
 export {
     css,
-    express,
+    ton,
     git,
     github,
     html,
     javascript,
     mongodb,
-    motion,
+    solidity,
     mui,
     nextjs,
     nodejs,
