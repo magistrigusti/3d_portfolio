@@ -189,7 +189,7 @@ export const projects = [
         theme: 'btn-back-red',
         name: 'Amazon Price Tracker',
         description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        link: 'https://github.com/magistrigusti/MarketplacePublic.git',
     },
     {
         iconUrl: threads,
